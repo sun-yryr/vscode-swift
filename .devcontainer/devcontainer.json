@@ -13,7 +13,8 @@
 	"settings": { 
 		"terminal.integrated.shell.linux": null,
 		"sde.languageServerMode": "sourcekit-lsp",
-		"sourcekit-lsp.serverPath": "/usr/bin/sourcekit-lsp"
+		"sourcekit-lsp.serverPath": "/usr/bin/sourcekit-lsp",
+		"sourcekit-lsp.toolchainPath": "/usr/bin/swift"
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
