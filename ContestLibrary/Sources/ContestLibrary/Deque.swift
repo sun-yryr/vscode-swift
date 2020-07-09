@@ -15,6 +15,7 @@ struct Deque<T> {
         // 終端の位置を後ろにずらして追加
         backIndex = indexClipping(backIndex + 1)
         items[backIndex] = item
+        count += 1
     }
 
     /* 先端に要素を追加する */
@@ -26,6 +27,7 @@ struct Deque<T> {
         // 先端の位置を前にずらして追加
         frontIndex = indexClipping(frontIndex - 1)
         items[frontIndex] = item
+        count += 1
     }
 
     /* 先端の要素を取り出す
@@ -33,6 +35,7 @@ struct Deque<T> {
     mutating func popFront() -> T? {
         let res = items[frontIndex]
         frontIndex = indexClipping(frontIndex + 1)
+        count -= 1
         return res
     }
 
@@ -41,6 +44,7 @@ struct Deque<T> {
     mutating func popBack() -> T? {
         let res = items[backIndex]
         backIndex = indexClipping(backIndex - 1)
+        count -= 1
         return res
     }
 
